@@ -1,0 +1,81 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+// Inisialisasi LCD dengan alamat I2C 0x27 atau 0x3F tergantung modul
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+void setup() {
+    lcd.init(); // Inisialisasi LCD
+    lcd.backlight(); // Mengaktifkan lampu latar
+}
+
+void loop() {
+    String text = "Hello ESP32! ";
+    int len = text.length();
+    
+    while (true) {
+        for (int i = 16; i > -len; i--) {
+            lcd.clear();
+            lcd.setCursor(i, 0); // Atur posisi teks
+            lcd.print(text);
+            delay(150); // Delay untuk efek animasi yang lebih mulus
+        }
+    }
+}
+
+// lcd animasi
+// #include <Wire.h>
+// #include <LiquidCrystal_I2C.h>
+
+// // Inisialisasi LCD dengan alamat I2C 0x27 atau 0x3F tergantung modul
+// LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+// // Karakter kustom untuk animasi orang berjalan
+// byte frame1[8] = {
+//     0b00100,
+//     0b00100,
+//     0b00100,
+//     0b01110,
+//     0b10101,
+//     0b00100,
+//     0b01010,
+//     0b10001
+// };
+
+// byte frame2[8] = {
+//     0b00100,
+//     0b00100,
+//     0b00100,
+//     0b01110,
+//     0b10101,
+//     0b00100,
+//     0b10001,
+//     0b01010
+// };
+
+// void setup() {
+//     lcd.init(); // Inisialisasi LCD
+//     lcd.backlight(); // Mengaktifkan lampu latar
+    
+//     // Buat karakter kustom
+//     lcd.createChar(0, frame1);
+//     lcd.createChar(1, frame2);
+// }
+
+// void loop() {
+//     int pos = 0;
+//     while (true) {
+//         for (pos = 0; pos < 16; pos++) {
+//             lcd.clear();
+//             lcd.setCursor(pos, 0);
+//             lcd.write(byte(0)); // Tampilkan frame 1
+//             delay(200);
+            
+//             lcd.clear();
+//             lcd.setCursor(pos, 0);
+//             lcd.write(byte(1)); // Tampilkan frame 2
+//             delay(200);
+//         }
+//     }
+// }
+
