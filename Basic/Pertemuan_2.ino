@@ -2,7 +2,7 @@
 #include <WiFi.h>
 #include <BlynkSimpleEsp32.h>
 
-char auth[] = "YOUR_BLYNK_AUTH_TOKEN";
+char auth[] = BLYNK_AUTH_TOKEN;
 char ssid[] = "Nama_WiFi";
 char pass[] = "Password_WiFi";
 
