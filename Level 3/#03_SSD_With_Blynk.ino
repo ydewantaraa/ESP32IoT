@@ -30,14 +30,24 @@ void setup()
 }
 
 BLYNK_WRITE(V0) {
-    int buttonState = param.asInt();
-    // display number 1
-    digitalWrite(B, buttonState);
-    digitalWrite(C, buttonState);
-    delay(1000);
+  int buttonState = param.asInt();
+  // display number 0
+  digitalWrite(A, buttonState);
+  digitalWrite(B, buttonState);
+  digitalWrite(C, buttonState);
+  digitalWrite(D, buttonState);
+  digitalWrite(E, buttonState);
+  digitalWrite(F, buttonState);
 }
 
 BLYNK_WRITE(V1) {
+  int buttonState = param.asInt();
+  // display number 1
+  digitalWrite(B, buttonState);
+  digitalWrite(C, buttonState);
+}
+
+BLYNK_WRITE(V2) {
   int buttonState = param.asInt();
   // display number 2
   digitalWrite(A, buttonState);
@@ -45,10 +55,9 @@ BLYNK_WRITE(V1) {
   digitalWrite(D, buttonState);
   digitalWrite(E, buttonState);
   digitalWrite(G, buttonState);
-  delay(1000);
 }
 
-BLYNK_WRITE(V2) {
+BLYNK_WRITE(V3) {
   int buttonState = param.asInt();
   // display number 3
   digitalWrite(A, buttonState);
@@ -56,7 +65,67 @@ BLYNK_WRITE(V2) {
   digitalWrite(C, buttonState);
   digitalWrite(D, buttonState);
   digitalWrite(G, buttonState);
-  delay(1000);
+}
+
+BLYNK_WRITE(V4) {
+  int buttonState = param.asInt();
+  // display number 4
+  digitalWrite(B, buttonState);
+  digitalWrite(C, buttonState);
+  digitalWrite(F, buttonState);
+  digitalWrite(G, buttonState);
+}
+
+BLYNK_WRITE(V5) {
+  int buttonState = param.asInt();
+  // display number 5
+  digitalWrite(A, buttonState);
+  digitalWrite(C, buttonState);
+  digitalWrite(D, buttonState);
+  digitalWrite(F, buttonState);
+  digitalWrite(G, buttonState);
+}
+
+BLYNK_WRITE(V6) {
+  int buttonState = param.asInt();
+  // display number 6
+  digitalWrite(A, buttonState);
+  digitalWrite(C, buttonState);
+  digitalWrite(D, buttonState);
+  digitalWrite(E, buttonState);
+  digitalWrite(F, buttonState);
+  digitalWrite(G, buttonState);
+}
+
+BLYNK_WRITE(V7) {
+  int buttonState = param.asInt();
+  // display number 7
+  digitalWrite(A, buttonState);
+  digitalWrite(B, buttonState);
+  digitalWrite(C, buttonState);
+}
+
+BLYNK_WRITE(V8) {
+  int buttonState = param.asInt();
+  // display number 8
+  digitalWrite(A, buttonState);
+  digitalWrite(B, buttonState);
+  digitalWrite(C, buttonState);
+  digitalWrite(D, buttonState);
+  digitalWrite(E, buttonState);
+  digitalWrite(F, buttonState);
+  digitalWrite(G, buttonState);
+}
+
+BLYNK_WRITE(V9) {
+  int buttonState = param.asInt();
+  // display number 9
+  digitalWrite(A, buttonState);
+  digitalWrite(B, buttonState);
+  digitalWrite(C, buttonState);
+  digitalWrite(D, buttonState);
+  digitalWrite(F, buttonState);
+  digitalWrite(G, buttonState);
 }
 
 void loop()
