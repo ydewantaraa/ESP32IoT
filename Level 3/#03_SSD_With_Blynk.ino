@@ -9,45 +9,53 @@ char auth[] = BLYNK_AUTH_TOKEN;
 char ssid[] = "";
 char pass[] = "";
 
+const int A = 2;
+const int B = 4;
+const int C = 15;
+const int D = 5;
+const int E = 18;
+const int F = 19;
+const int G = 21;
+
 void setup()
 {
   Blynk.begin(auth, ssid, pass);
-  pinMode(2, OUTPUT);
-  pinMode(4, OUTPUT);
-  pinMode(15, OUTPUT);
-  pinMode(5, OUTPUT);
-  pinMode(18, OUTPUT);
-  pinMode(19, OUTPUT);
-  pinMode(21, OUTPUT);
+  pinMode(A, OUTPUT);
+  pinMode(B, OUTPUT);
+  pinMode(C, OUTPUT);
+  pinMode(D, OUTPUT);
+  pinMode(E, OUTPUT);
+  pinMode(F, OUTPUT);
+  pinMode(G, OUTPUT);
 }
 
 BLYNK_WRITE(V0) {
     int buttonState = param.asInt();
     // display number 1
-    digitalWrite(4, buttonState);
-    digitalWrite(15, buttonState);
+    digitalWrite(B, buttonState);
+    digitalWrite(C, buttonState);
     delay(1000);
 }
 
 BLYNK_WRITE(V1) {
   int buttonState = param.asInt();
   // display number 2
-  digitalWrite(2, buttonState);
-  digitalWrite(4, buttonState);
-  digitalWrite(5, buttonState);
-  digitalWrite(18, buttonState);
-  digitalWrite(21, buttonState);
+  digitalWrite(A, buttonState);
+  digitalWrite(B, buttonState);
+  digitalWrite(D, buttonState);
+  digitalWrite(E, buttonState);
+  digitalWrite(G, buttonState);
   delay(1000);
 }
 
 BLYNK_WRITE(V2) {
   int buttonState = param.asInt();
   // display number 3
-  digitalWrite(2, buttonState);
-  digitalWrite(4, buttonState);
-  digitalWrite(15, buttonState);
-  digitalWrite(5, buttonState);
-  digitalWrite(21, buttonState);
+  digitalWrite(A, buttonState);
+  digitalWrite(B, buttonState);
+  digitalWrite(C, buttonState);
+  digitalWrite(D, buttonState);
+  digitalWrite(G, buttonState);
   delay(1000);
 }
 
