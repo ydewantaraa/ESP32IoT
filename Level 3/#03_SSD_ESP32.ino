@@ -28,7 +28,7 @@ void loop()
   digitalWrite(F, HIGH);
   digitalWrite(G, HIGH);
   delay(1000); // Wait for 1000 millisecond(s)
-  // display number G
+  // display number 8
   digitalWrite(A, HIGH);
   digitalWrite(B, HIGH);
   digitalWrite(C, HIGH);
@@ -37,7 +37,7 @@ void loop()
   digitalWrite(F, HIGH);
   digitalWrite(G, HIGH);
   delay(1000); // Wait for 1000 millisecond(s)
-  // display number F
+  // display number 7
   digitalWrite(A, HIGH);
   digitalWrite(B, HIGH);
   digitalWrite(C, HIGH);
@@ -46,7 +46,7 @@ void loop()
   digitalWrite(F, LOW);
   digitalWrite(G, LOW);
   delay(1000); // Wait for 1000 millisecond(s)
-  // display number E
+  // display number 6
   digitalWrite(A, HIGH);
   digitalWrite(B, LOW);
   digitalWrite(C, HIGH);
@@ -55,7 +55,7 @@ void loop()
   digitalWrite(F, HIGH);
   digitalWrite(G, HIGH);
   delay(1000); // Wait for 1000 millisecond(s)
-  // display number D
+  // display number 5
   digitalWrite(A, HIGH);
   digitalWrite(B, LOW);
   digitalWrite(C, HIGH);
@@ -64,7 +64,7 @@ void loop()
   digitalWrite(F, HIGH);
   digitalWrite(G, HIGH);
   delay(1000); // Wait for 1000 millisecond(s)
-  // display number C
+  // display number 4
   digitalWrite(A, LOW);
   digitalWrite(B, HIGH);
   digitalWrite(C, HIGH);
@@ -73,7 +73,7 @@ void loop()
   digitalWrite(F, HIGH);
   digitalWrite(G, HIGH);
   delay(1000); // Wait for 1000 millisecond(s)
-  // display number B
+  // display number 3
   digitalWrite(A, HIGH);
   digitalWrite(B, HIGH);
   digitalWrite(C, HIGH);
@@ -82,7 +82,7 @@ void loop()
   digitalWrite(F, LOW);
   digitalWrite(G, HIGH);
   delay(1000); // Wait for 1000 millisecond(s)
-  // display number A
+  // display number 2
   digitalWrite(A, HIGH);
   digitalWrite(B, HIGH);
   digitalWrite(C, LOW);
